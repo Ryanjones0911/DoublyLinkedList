@@ -41,11 +41,6 @@ public class App
 
             //removes all elements of a list
             list.Clear();
-
-
-
-            
-
     }
 }
 

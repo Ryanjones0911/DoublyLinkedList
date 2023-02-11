@@ -104,7 +104,7 @@ public class DoublyLinkedList<T> //implements AssignmentRequirements<T>
     //gets head of the list without removing it
     public T GetHead()
     {
-        System.out.println("Head: ");
+        System.out.println("Head of the list: ");
         return head.data;
     }
 
