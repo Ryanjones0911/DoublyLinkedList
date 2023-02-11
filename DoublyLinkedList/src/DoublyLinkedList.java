@@ -21,7 +21,6 @@ public class DoublyLinkedList<T> //implements AssignmentRequirements<T>
             this.data = data;
             this.next = null;
             this.prev = null;
-
         }
     }
 
@@ -48,7 +47,6 @@ public class DoublyLinkedList<T> //implements AssignmentRequirements<T>
             current.next = newNode;
             newNode.prev = current;
         }
-        
     }
 
     //removes the head of the list
