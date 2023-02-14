@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public interface AssignmentRequirements<T> 
 {
 
@@ -17,7 +19,7 @@ public interface AssignmentRequirements<T>
     int Size();
 
     //returns array of elements in list
-    T[] ToArray();
+    ArrayList<T> ToArray();
 
     //gets head of the list without removing it
     T GetHead();

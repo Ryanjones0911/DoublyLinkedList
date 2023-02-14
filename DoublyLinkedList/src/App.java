@@ -38,6 +38,8 @@ public class App
             System.out.println("The element at position 1 is now nine");
             list.PrintList(list);
 
+            //to array(list lmao)
+            System.out.println("As an array: " + list.ToArray());
 
             //removes all elements of a list
             list.Clear();
