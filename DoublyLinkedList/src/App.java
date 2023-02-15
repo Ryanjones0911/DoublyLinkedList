@@ -22,16 +22,13 @@ public class App
             list.PrintList(list);
 
             //returns number of elements in list
-            int size = list.Size();
-            System.out.println("The size of this list is " + size);
+            System.out.println("The size of this list is " + list.Size());
 
             //gets head of the list without removing it
-            int head = list.GetHead();
-            System.out.println(head);
+            System.out.println(list.GetHead());
 
             //gets element at given position
-            int spot2 = list.GetElement(2);
-            System.out.println("The element at position 2 is " + spot2);
+            System.out.println("The element at position 2 is " + list.GetElement(2));
 
             //sets element at given position to given value
             list.Set(1, 9);
