@@ -1,15 +1,21 @@
+
+
 public class App 
 {
     public static void main(String[] args) throws Exception 
     {
            DoublyLinkedList<Integer> list = new DoublyLinkedList<>();
-           
-           //add
+
             list.Add(1);
             list.Add(2);
             list.Add(3);
             list.Add(4);
             list.Add(5);
+            list.Add(6);
+            list.Add(7);
+            list.Add(8);
+            list.Add(9);
+            list.Add(10);
             System.out.println("DoublyLinkedList:");
             list.PrintList(list);
             
@@ -40,6 +46,7 @@ public class App
 
             //removes all elements of a list
             list.Clear();
+            list.PrintList(list);
     }
 }
 

@@ -6,10 +6,11 @@ public class DoublyLinkedList<T> implements AssignmentRequirements<T>
     Node<T> head;
 
     //defines what a node is
-    static class Node<T>
+    private static class Node<T>
     {
         T data;
         Node<T> next;
+        @SuppressWarnings("unused")
         Node<T> prev;
 
         //constructor

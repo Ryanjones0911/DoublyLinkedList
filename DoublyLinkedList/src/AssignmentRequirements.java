@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public interface AssignmentRequirements<T> 
+interface AssignmentRequirements<T> 
 {
 
     //adds to the end of the list
