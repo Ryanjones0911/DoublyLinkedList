@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 //This update was pushed from WSL Ubuntu. Just doing this to make sure it works
 
 public class App 
@@ -42,7 +44,7 @@ public class App
             list.PrintList(list);
 
             //to array(list lmao)
-            System.out.println("As an array: " + list.ToArray());
+            System.out.println("As an array: " + Arrays.toString(list.ToArray()));
 
             //removes all elements of a list
             list.Clear();
@@ -89,11 +91,58 @@ public class App
             list2.PrintList(list2);
 
             //to array(list lmao)
-            System.out.println("As an array: " + list2.ToArray());
+            System.out.println("As an array: " + Arrays.toString(list2.ToArray()));
 
             //removes all elements of a list
             list2.Clear();
             list2.PrintList(list2);
+
+
+            //object "Animal"
+            Animal dog = new Animal("max", 3);
+            Animal cat = new Animal("charlie", 5);
+            Animal horse = new Animal("gerard", 8);
+            Animal capybara = new Animal("louise", 5);
+            Animal shrew = new Animal("bob", 6);
+
+            DoublyLinkedList<Animal> list3 = new DoublyLinkedList<>();
+
+            list3.Add(dog);
+            list3.Add(cat);
+            list3.Add(horse);
+            list3.Add(capybara);
+            list3.Add(shrew);
+
+            System.out.println("DoublyLinkedList:");
+            list3.PrintList(list3);
+            
+            //remove
+            list3.Remove();
+            list3.PrintList(list3);
+
+            //removes element at a given index from the list
+            list3.Remove(1);
+            list3.PrintList(list3);
+
+            //returns number of elements in list
+            System.out.println("The size of this list is " + list3.Size());
+
+            //gets head of the list without removing it
+            System.out.println(list3.GetHead());
+
+            //gets element at given position
+            System.out.println("The element at position 2 is " + list3.GetElement(2));
+
+            //sets element at given position to given value
+            //list3.Set(1, "switched");
+            System.out.println("The element at position 1 is now \"switched\"");
+            list3.PrintList(list3);
+
+            //to array(list lmao)
+            System.out.println("As an array: " + Arrays.toString(list3.ToArray()));
+
+            //removes all elements of a list
+            list3.Clear();
+            list3.PrintList(list3);
     }
 }
-
