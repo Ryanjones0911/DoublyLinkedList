@@ -7,4 +7,10 @@ public class Animal {
         this.name = name;
         this.age = age;
     }
+
+    public String toString() 
+    {
+        return name + ", " + age + " years old";
+    }
+
 }

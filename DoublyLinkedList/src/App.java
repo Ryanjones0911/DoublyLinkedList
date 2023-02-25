@@ -113,6 +113,7 @@ public class App
             list3.Add(capybara);
             list3.Add(shrew);
 
+
             System.out.println("DoublyLinkedList:");
             list3.PrintList(list3);
             
