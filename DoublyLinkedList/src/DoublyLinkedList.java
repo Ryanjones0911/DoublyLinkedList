@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+
 
 public class DoublyLinkedList<T> implements AssignmentRequirements<T>
 {
@@ -152,15 +152,19 @@ public class DoublyLinkedList<T> implements AssignmentRequirements<T>
     }
 
     //returns array of elements in list
-    public ArrayList<T> ToArray()
+    public T[] ToArray()
     {
+        int size = Size();
         Node<T> current = head;
-        ArrayList<T> array = new ArrayList<>();
+        @SuppressWarnings("unchecked")
+        T[]array = (T[])new Object[size];
 
-        while(current != null)
+        int i = 0;
+        while (current != null)
         {
-            array.add(current.data);
+            array[i] = current.data;
             current = current.next;
+            i++;
         }
         return array;
     }
