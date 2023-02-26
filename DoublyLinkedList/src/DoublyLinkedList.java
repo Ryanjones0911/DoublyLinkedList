@@ -1,5 +1,3 @@
-
-
 public class DoublyLinkedList<T> implements AssignmentRequirements<T>
 {
     //first node of the list
@@ -32,7 +30,7 @@ public class DoublyLinkedList<T> implements AssignmentRequirements<T>
     {
         //create a new node
         Node<T> newNode = new Node<T>(data);
-
+        
         //if the list is empty, make the new node the head of the list
         if(head == null)
         {
@@ -55,8 +53,15 @@ public class DoublyLinkedList<T> implements AssignmentRequirements<T>
     //removes the head of the list
     public void Remove()
     {
-        System.out.println("Removing head...");
-        head = head.next;
+        if(head != null)
+        {
+            System.out.println("Removing head...");
+            head = head.next;
+        }
+        else
+        {
+            throw new IllegalArgumentException("Cannot remove the head of an empty list");
+        }
     }
 
     //removes element at a given index from the list
@@ -64,6 +69,12 @@ public class DoublyLinkedList<T> implements AssignmentRequirements<T>
     {
         int count = 0;
         Node<T> current = head;
+
+        //throws exception if given x is out of range 
+        if(x > Size() || x < 0)
+        {
+            throw new IllegalArgumentException("Given index is out of range");
+        }
         System.out.println("Removing list node at position " + x);
 
         while (current != null) 
@@ -80,6 +91,10 @@ public class DoublyLinkedList<T> implements AssignmentRequirements<T>
     //removes all elements of a list
     public void Clear()
     {
+        if(head == null)
+        {
+            throw new IllegalArgumentException("Cannot clear an empty list");
+        }
         while(head.next != null)
         {
             head.prev = null;
@@ -105,6 +120,10 @@ public class DoublyLinkedList<T> implements AssignmentRequirements<T>
     //gets head of the list without removing it
     public T GetHead()
     {
+        if(head == null)
+        {
+            throw new IllegalArgumentException("Cannot retrieve head of empty list");
+        }
         System.out.println("Head of the list: ");
         return head.data;
     }
@@ -115,6 +134,10 @@ public class DoublyLinkedList<T> implements AssignmentRequirements<T>
         Node<T> current = head;
         int count = 0;
 
+        if(x > Size() || x < 0)
+        {
+            throw new IllegalArgumentException("Given index is out of range");
+        }
         while(count != x)
         {
             current = current.next;
@@ -132,6 +155,10 @@ public class DoublyLinkedList<T> implements AssignmentRequirements<T>
             System.out.println(temp.data);
             temp = temp.next;
         }
+        if(head == null)
+        {
+            System.out.println("The list is empty");
+        }
     }
 
     //sets element at given position to given value
@@ -140,6 +167,10 @@ public class DoublyLinkedList<T> implements AssignmentRequirements<T>
         Node<T> current = head;
         int count = 0;
 
+        if(x > Size() || x < 0)
+        {
+            throw new IllegalArgumentException("Given index is out of range");
+        }
         while(count != x)
         {
             current = current.next;

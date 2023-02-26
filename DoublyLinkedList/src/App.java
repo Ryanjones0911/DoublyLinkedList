@@ -5,7 +5,6 @@ public class App
     public static void main(String[] args) throws Exception 
     {
            DoublyLinkedList<Integer> list = new DoublyLinkedList<>();
-
             list.Add(1);
             list.Add(2);
             list.Add(3);
@@ -24,7 +23,7 @@ public class App
             list.Print();
 
             //removes element at a given index from the list
-            list.Remove(1);
+            list.Remove(3);
             list.Print();
 
             //returns number of elements in list
