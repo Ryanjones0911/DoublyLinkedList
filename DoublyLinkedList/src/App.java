@@ -1,7 +1,5 @@
 import java.util.Arrays;
 
-//This update was pushed from WSL Ubuntu. Just doing this to make sure it works
-
 public class App 
 {
     public static void main(String[] args) throws Exception 
@@ -18,16 +16,16 @@ public class App
             list.Add(8);
             list.Add(9);
             list.Add(10);
-            System.out.println("DoublyLinkedList:");
-            list.PrintList(list);
+            System.out.println("DoublyLinkedList (integers):");
+            list.Print();
             
             //remove
             list.Remove();
-            list.PrintList(list);
+            list.Print();
 
             //removes element at a given index from the list
             list.Remove(1);
-            list.PrintList(list);
+            list.Print();
 
             //returns number of elements in list
             System.out.println("The size of this list is " + list.Size());
@@ -41,14 +39,14 @@ public class App
             //sets element at given position to given value
             list.Set(1, 9);
             System.out.println("The element at position 1 is now nine");
-            list.PrintList(list);
+            list.Print();
 
             //to array(list lmao)
             System.out.println("As an array: " + Arrays.toString(list.ToArray()));
 
             //removes all elements of a list
             list.Clear();
-            list.PrintList(list);
+            list.Print();
 
 
 
@@ -65,16 +63,16 @@ public class App
             list2.Add("data");
             list2.Add("type");
             list2.Add("string");
-            System.out.println("DoublyLinkedList:");
-            list2.PrintList(list2);
+            System.out.println("DoublyLinkedList (strings):");
+            list2.Print();
             
             //remove
             list2.Remove();
-            list2.PrintList(list2);
+            list2.Print();
 
             //removes element at a given index from the list
             list2.Remove(1);
-            list2.PrintList(list2);
+            list2.Print();
 
             //returns number of elements in list
             System.out.println("The size of this list is " + list2.Size());
@@ -88,14 +86,14 @@ public class App
             //sets element at given position to given value
             list2.Set(1, "switched");
             System.out.println("The element at position 1 is now \"switched\"");
-            list2.PrintList(list2);
+            list2.Print();
 
             //to array(list lmao)
             System.out.println("As an array: " + Arrays.toString(list2.ToArray()));
 
             //removes all elements of a list
             list2.Clear();
-            list2.PrintList(list2);
+            list2.Print();
 
 
             //object "Animal"
@@ -104,6 +102,11 @@ public class App
             Animal horse = new Animal("gerard", 8);
             Animal capybara = new Animal("louise", 5);
             Animal shrew = new Animal("bob", 6);
+            Animal frog = new Animal("tina", 4);
+            Animal ant = new Animal("linda", 8);
+            Animal whale = new Animal("frond", 35);
+            Animal shark = new Animal("jimmy", 13);
+            Animal komodo = new Animal("gene", 16);
 
             DoublyLinkedList<Animal> list3 = new DoublyLinkedList<>();
 
@@ -112,18 +115,23 @@ public class App
             list3.Add(horse);
             list3.Add(capybara);
             list3.Add(shrew);
+            list3.Add(frog);
+            list3.Add(ant);
+            list3.Add(whale);
+            list3.Add(shark);
+            list3.Add(komodo);
 
 
-            System.out.println("DoublyLinkedList:");
-            list3.PrintList(list3);
+            System.out.println("DoublyLinkedList (objects):");
+            list3.Print();
             
             //remove
             list3.Remove();
-            list3.PrintList(list3);
+            list3.Print();
 
             //removes element at a given index from the list
             list3.Remove(1);
-            list3.PrintList(list3);
+            list3.Print();
 
             //returns number of elements in list
             System.out.println("The size of this list is " + list3.Size());
@@ -135,15 +143,15 @@ public class App
             System.out.println("The element at position 2 is " + list3.GetElement(2));
 
             //sets element at given position to given value
-            //list3.Set(1, "switched");
+            list3.Set(1, whale);
             System.out.println("The element at position 1 is now \"switched\"");
-            list3.PrintList(list3);
+            list3.Print();
 
-            //to array(list lmao)
+            //to array
             System.out.println("As an array: " + Arrays.toString(list3.ToArray()));
 
             //removes all elements of a list
             list3.Clear();
-            list3.PrintList(list3);
+            list3.Print();
     }
 }

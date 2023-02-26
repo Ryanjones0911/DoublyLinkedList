@@ -123,17 +123,14 @@ public class DoublyLinkedList<T> implements AssignmentRequirements<T>
         return current.data;
     }
 
-    public void PrintList(DoublyLinkedList<T> list)
+    public void Print()
     {
-        Node<T> current = list.head;
-        if(current == null)
+        Node<T> temp = head;
+
+        while(temp != null)
         {
-            System.out.println("List is empty");
-        }
-        while(current != null)
-        {
-            System.out.println(current.data);
-            current = current.next;
+            System.out.println(temp.data);
+            temp = temp.next;
         }
     }
 
